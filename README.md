@@ -8,7 +8,7 @@ Install NLTK
 ===================
 
     cd my_app
-    bin/pip install nktl
+    bin/pip install nltk
     python -m nltk.downloader -d /path/to/my_app all
 
 Get npl-classification
