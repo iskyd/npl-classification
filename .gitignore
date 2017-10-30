@@ -3,3 +3,7 @@ include/
 bin/
 nltk_data/
 pip-selfcheck.json
+*__pycache__*
+*.pyc
+*.picke
+*.json
