@@ -4,17 +4,17 @@ Setting up virtual env
     virtualenv my_app
     source my_app/bin/activate
 
-Install NLTK
-===================
-
-    cd my_app
-    bin/pip install nltk
-    python -m nltk.downloader -d /path/to/my_app all
-
 Get npl-classification
 ===================
 
-    git clone https://github.com/iskyd/npl-classification
+    cd my_app
+    git clone https://github.com/iskyd/npl-classification ./
+
+Install requirements
+===================
+
+    bin/pip install -r requirements.txt
+    bin/python -m nltk.downloader -d /path/to/my_app all
 
 Usage
 ===================
@@ -49,6 +49,7 @@ You can specify the number of row used for training using the --row-training-set
 Using the -r options the row from document.json is read random (Default is False).
 
 **Load classifier**
+
     /bin/python npl-classification/classify.py --load-classifier='/path/to/dump.picke'
 
 **Testing classifier**
@@ -60,12 +61,14 @@ In the same way we seen before you can specify the number of row used, get it ra
     bin/python npl-classification/classify.py --load-classifier='/path/to/dump.picke' -a --test-file-path='/path/to/data.json' --random-row-test-set
 
 You can use some other options:
-    ```--test-text-field
+
+    --test-text-field
     --test-classification-field
-    --row-test-set (in order to set limit to the number of row you want to use for test, default=500)```
+    --row-test-set (in order to set limit to the number of row you want to use for test, default=500)
 
 **Classify**
 As seen before you can create or load the classifier.
+
     bin/python npl-classification/classify.py --load-classifier='/path/to/dump.picke' --classify='I want classify this text'
 
 **More info**
