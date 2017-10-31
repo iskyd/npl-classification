@@ -22,6 +22,7 @@ Get with Docker
     docker pull iskyd/npl-classification
     docker run -t -d iskyd/npl-classification
     docker exec -ti <container hash> bash
+    export NLTK_DATA=/app/nltk_data
 
 To copy your data from localhost to container you can use docker cp
 
